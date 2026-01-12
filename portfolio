@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divya Sri | Computer Science Engineer</title>
+    <style>
+        /* --- MAIN THEME (BLUE) --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d47a1; /* Deep Blue Background */
+            color: white;
+        }
+
+        /* --- HEADER SECTION --- */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .profile-container {
+            flex: 1;
+            max-width: 300px;
+            text-align: center;
+            margin-right: 40px;
+        }
+
+        .profile-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50% 50% 0 0; /* Arch shape like the example */
+            object-fit: cover;
+            border: 4px solid white;
+            background-color: #bbdefb; /* Placeholder color if no image */
+        }
+
+        .intro-text {
+            flex: 2;
+            max-width: 600px;
+        }
+
+        h1 { font-size: 3.5rem; margin: 0; font-weight: 700; }
+        h2 { font-size: 1.8rem; margin-top: 10px; font-weight: 300; color: #bbdefb; }
+        p.bio { font-size: 1.1rem; line-height: 1.6; color: #e3f2fd; }
+
+        /* --- LINKS BAR --- */
+        .nav-links { margin-top: 20px; }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-links a:hover { border-bottom: 2px solid white; }
+
+        /* --- PROJECTS SECTION (White Box) --- */
+        .content-section {
+            background: white;
+            color: #333;
+            padding: 3rem 2rem;
+        }
+        
+        .container { max-width: 1000px; margin: auto; }
+        
+        .section-title {
+            color: #0d47a1;
+            border-bottom: 2px solid #0d47a1;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f4f4f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: #0d47a1; margin-top: 0; }
+        
+        .btn {
+            display: inline-block;
+            background: #0d47a1;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #0a3578;
+            text-align: center;
+            padding: 20px;
+            color: #bbdefb;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            .profile-container { margin: 0 0 20px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="profile-container">
+            <img src="https://avatars.githubusercontent.com/u/123456?v=4" alt="Divya Sri" class="profile-photo">
+        </div>
+        <div class="intro-text">
+            <h1>Divya Sri</h1>
+            <h2>Computer Science Engineer & AI Enthusiast</h2>
+            <p class="bio">
+                Graduate of <strong>JNTUH UCES</strong> with a passion for building intelligent systems. 
+                Expert in <strong>Java, Python, and Machine Learning</strong>. 
+                I turn complex problems into efficient code.
+            </p>
+            <div class="nav-links">
+                <a href="mailto:divyasrigourakagari@gmail.com">Contact</a>
+                <a href="https://github.com/gdivyasri5">GitHub</a>
+                <a href="#projects">Projects</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <h3>📸 Facial Clocking System</h3>
+                    <p>Automated attendance system using Python & OpenCV. Replaces manual logs with biometric face detection.</p>
+                    <a href="https://github.com/gdivyasri5/facial-clocking-system" class="btn">View Code</a>
+                </div>
+
+                <div class="card">
+                    <h3>📰 News Classification AI</h3>
+                    <p>Machine Learning model (Naive Bayes) that automatically categorizes news headlines into Sports, Tech, etc.</p>
+                    <a href="https://github.com/gdivyasri5/news-headline-classifier" class="btn">View Code</a>
+                </div>
+
+                <div class="card">
+                    <h3>😊 Sentiment Analysis AI</h3>
+                    <p>Natural Language Processing tool using TextBlob to detect positive/negative emotions in customer feedback.</p>
+                    <a href="https://github.com/gdivyasri5/sentiment-analysis-ai" class="btn">View Code</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Gourakagari Divya Sri. Built with Code.</p>
+    </footer>
+
+</body>
+</html>

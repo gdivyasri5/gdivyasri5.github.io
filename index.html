@@ -3,154 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOURAKAGARI DIVYA SRI| Portfolio</title>
+    <title>Divya Sri | Portfolio</title>
     <style>
         /* --- CSS VARIABLES & RESET --- */
-        :root {
-            --primary-blue: #0d47a1;
-            --light-blue: #e3f2fd;
-            --white: #ffffff;
-            --text-dark: #333;
-            --text-light: #f4f4f9;
-        }
+        :root { --primary-blue: #0d47a1; --light-blue: #e3f2fd; --white: #ffffff; --text-dark: #333; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: var(--light-blue); color: var(--text-dark); }
 
-        /* --- NAVIGATION BAR --- */
-        nav {
-            background-color: var(--primary-blue);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        nav a {
-            color: var(--white);
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
+        /* --- NAVIGATION --- */
+        nav { background-color: var(--primary-blue); padding: 1rem; position: sticky; top: 0; z-index: 1000; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        nav a { color: var(--white); text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; transition: color 0.3s; }
         nav a:hover { color: #bbdefb; border-bottom: 2px solid #bbdefb; }
 
-        /* --- HERO SECTION (Blue Background) --- */
-        header {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 4rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            text-align: left;
-        }
-        
+        /* --- HEADER --- */
+        header { background-color: var(--primary-blue); color: var(--white); padding: 4rem 2rem; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; text-align: left; }
         .profile-container { flex: 1; max-width: 250px; text-align: center; margin-right: 40px; }
-        
-        /* CIRCLE PHOTO FIX */
-        .profile-photo {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%; /* MAKES IT A PERFECT CIRCLE */
-            object-fit: cover;
-            border: 5px solid var(--white);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
+        .profile-photo { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 5px solid var(--white); box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
         .intro-text { flex: 2; max-width: 600px; }
         h1 { font-size: 3rem; margin: 0; font-weight: 700; }
         h2 { font-size: 1.5rem; margin-top: 10px; font-weight: 300; color: #bbdefb; }
         p.bio { font-size: 1.1rem; line-height: 1.6; color: #e3f2fd; margin-bottom: 20px; }
-        
-        .resume-btn {
-            background-color: var(--white);
-            color: var(--primary-blue);
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 25px;
-            display: inline-block;
-            transition: transform 0.2s;
-        }
+        .resume-btn { background-color: var(--white); color: var(--primary-blue); padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 25px; display: inline-block; transition: transform 0.2s; }
         .resume-btn:hover { transform: scale(1.05); }
 
-        /* --- SECTIONS COMMON STYLE --- */
+        /* --- SECTIONS --- */
         .section { padding: 4rem 2rem; }
-        .container { max-width: 1000px; margin: auto; }
-        .section-title {
-            color: var(--primary-blue);
-            font-size: 2rem;
-            border-bottom: 3px solid var(--primary-blue);
-            display: inline-block;
-            margin-bottom: 30px;
-        }
-
-        /* --- EDUCATION & QUALIFICATIONS --- */
         .bg-white { background-color: var(--white); }
-        .timeline-item {
-            border-left: 4px solid var(--primary-blue);
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
+        .container { max-width: 1000px; margin: auto; }
+        .section-title { color: var(--primary-blue); font-size: 2rem; border-bottom: 3px solid var(--primary-blue); display: inline-block; margin-bottom: 30px; }
+
+        /* --- TIMELINE ITEMS --- */
+        .timeline-item { border-left: 4px solid var(--primary-blue); padding-left: 20px; margin-bottom: 20px; }
         .timeline-item h3 { margin: 0; color: #000; }
         .timeline-item span { color: #666; font-size: 0.9rem; font-style: italic; }
 
-        /* --- PROJECTS GRID --- */
+        /* --- GRID --- */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card {
-            background: var(--white);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
+        .card { background: var(--white); padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s; }
         .card:hover { transform: translateY(-5px); }
         .card h3 { color: var(--primary-blue); margin-top: 0; }
-        .btn-code {
-            display: inline-block;
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 8px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
+        .btn-code { display: inline-block; background: var(--primary-blue); color: var(--white); padding: 8px 15px; text-decoration: none; border-radius: 5px; margin-top: 10px; }
 
-        /* --- ACHIEVEMENTS & CERTIFICATIONS --- */
+        /* --- CERTIFICATES LIST --- */
         ul.styled-list { list-style: none; padding: 0; }
-        ul.styled-list li {
-            background: var(--white);
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 5px solid #27ae60; /* Green accent */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
+        ul.styled-list li { background: var(--white); margin: 10px 0; padding: 15px; border-radius: 5px; border-left: 5px solid #27ae60; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
 
-        /* --- CONTACT & FOOTER --- */
+        /* --- FOOTER --- */
         .contact-section { background-color: #2c3e50; color: white; text-align: center; }
         .contact-section .section-title { color: white; border-color: white; }
-        .social-links a {
-            color: white;
-            font-size: 1.2rem;
-            margin: 0 15px;
-            text-decoration: none;
-            border: 1px solid white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-        }
+        .social-links a { color: white; margin: 0 15px; text-decoration: none; border: 1px solid white; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-top: 10px; }
         .social-links a:hover { background: white; color: #2c3e50; }
-
-        @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; }
-            .profile-container { margin: 0 0 20px 0; }
-            nav a { display: block; margin: 10px 0; }
-        }
+        @media (max-width: 768px) { header { flex-direction: column; text-align: center; } .profile-container { margin: 0 0 20px 0; } }
     </style>
 </head>
 <body>
@@ -158,9 +61,9 @@
     <nav>
         <a href="#home">Home</a>
         <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#contact">Contact</a>
+        <a href="#achievements">Certifications</a>
     </nav>
 
     <header id="home">
@@ -171,92 +74,75 @@
             <h1>GOURAKAGARI DIVYA SRI</h1>
             <h2>Computer Science Engineer & AI Enthusiast</h2>
             <p class="bio">
-                Graduate of <strong>JNTUH UCES</strong>. Passionate about solving real-world problems using <strong>Java, Python, and Machine Learning</strong>. I am adaptable, practical, and ready to contribute to organizational growth.
+                Graduate of <strong>JNTUH University College of Engineering Sultanpur</strong>. Passionate about solving real-world problems using <strong>Java, Python, and Machine Learning</strong>. I am adaptable, practical, and ready to contribute to organizational growth.
             </p>
-            <a href="#" class="resume-btn">📄 Download Resume</a>
+            <a href="resume.pdf" class="resume-btn" target="_blank">📄 Download Resume</a>
         </div>
     </header>
 
-    <div class="section bg-white" id="education">
+    <div class="section bg-white" id="experience">
         <div class="container">
-            <h2 class="section-title">🎓 Education</h2>
-            
+            <h2 class="section-title">💼 Experience & Internships</h2>
             <div class="timeline-item">
-                <h3>B.Tech in Computer Science & Engineering</h3>
-                <span>2023 - 2026 | JNTUH UCES, Sultanpur</span>
-                <p><strong>CGPA: 8.23 / 10</strong></p>
+                <h3>Software Development Intern</h3>
+                <span>CodTech IT Solutions</span>
+                <p>Gained hands-on experience in software development lifecycles and coding standards.</p>
             </div>
-            
             <div class="timeline-item">
-                <h3>Diploma in Computer Engineering</h3>
-                <span>2020 - 2023 | Smt. Durgabhai Deshmukh Govt. WTTI</span>
-                <p><strong>CGPA: 8.96 / 10</strong></p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Secondary School Certificate (SSC)</h3>
-                <span>2020 | T.S.R. School (Girls), Balanagar</span>
-                <p><strong>GPA: 10 / 10</strong></p>
+                <h3>AI/ML Trainee</h3>
+                <span>YBI Foundation</span>
+                <p>Completed intensive training in Artificial Intelligence and Machine Learning fundamentals.</p>
             </div>
         </div>
     </div>
 
-    <div class="section" id="projects">
+    <div class="section" id="education">
+        <div class="container">
+            <h2 class="section-title">🎓 Education</h2>
+            <div class="timeline-item">
+                <h3>B.Tech in Computer Science & Engineering</h3>
+                <span>2023 - 2026 | JNTUH UCES, Sultanpur | <strong>CGPA: 8.23</strong></span>
+            </div>
+            <div class="timeline-item">
+                <h3>Diploma in Computer Engineering</h3>
+                <span>2020 - 2023 | Smt. Durgabhai Deshmukh Govt. WTTI | <strong>CGPA: 8.96</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section bg-white" id="projects">
         <div class="container">
             <h2 class="section-title">💻 Featured Projects</h2>
             <div class="grid">
-                
                 <div class="card">
                     <h3>📸 Facial Clocking System</h3>
                     <p>Automated attendance system using Python & OpenCV. Replaces manual logs with biometric face detection.</p>
-                    <a href="https://github.com/gdivyasri5/facial-clocking-system" class="btn-code" target="_blank">View Code on GitHub</a>
+                    <a href="https://github.com/gdivyasri5/facial-clocking-system" class="btn-code" target="_blank">View Code</a>
                 </div>
-
                 <div class="card">
                     <h3>📰 News Classification AI</h3>
-                    <p>Machine Learning model (Naive Bayes) that automatically categorizes news headlines into Sports, Tech, etc.</p>
-                    <a href="https://github.com/gdivyasri5/news-headline-classifier" class="btn-code" target="_blank">View Code on GitHub</a>
+                    <p>Machine Learning model (Naive Bayes) that automatically categorizes news headlines.</p>
+                    <a href="https://github.com/gdivyasri5/news-headline-classifier" class="btn-code" target="_blank">View Code</a>
                 </div>
-
                 <div class="card">
                     <h3>😊 Sentiment Analysis AI</h3>
                     <p>NLP tool using TextBlob to detect positive/negative emotions in customer feedback.</p>
-                    <a href="https://github.com/gdivyasri5/sentiment-analysis-ai" class="btn-code" target="_blank">View Code on GitHub</a>
+                    <a href="https://github.com/gdivyasri5/sentiment-analysis-ai" class="btn-code" target="_blank">View Code</a>
                 </div>
-
             </div>
         </div>
     </div>
 
-    <div class="section bg-white" id="achievements">
+    <div class="section" id="achievements">
         <div class="container">
-            <h2 class="section-title">🏆 Certifications & Achievements</h2>
+            <h2 class="section-title">🏆 Certifications</h2>
             <ul class="styled-list">
-                <li><strong>Machine Learning Certification</strong> - Analytics Vidhya</li>
-                <li><strong>Introduction to Python</strong> - Analytics Vidhya</li>
-                <li><strong>RRB 10th Based Exam</strong> - Completed Dec 2025</li>
-                <li><strong>Participated in College Recruitment Drive</strong> - 10,000 Coders</li>
+                <li><strong>Microsoft:</strong> Career Essentials in Generative AI / Azure AI Fundamentals</li>
+                <li><strong>YBI Foundation:</strong> Artificial Intelligence and Machine Learning</li>
+                <li><strong>Great Learning:</strong> Python for Machine Learning</li>
+                <li><strong>CodTech IT Solutions:</strong> Internship Completion</li>
+                <li><strong>Recruitment Drive:</strong> 10000 Coders Participant (Jan 2026)</li>
             </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <h2 class="section-title">🛠 Technical Skills</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Languages</h3>
-                    <p>Java, Python, C++, SQL</p>
-                </div>
-                <div class="card">
-                    <h3>Web Technologies</h3>
-                    <p>HTML5, CSS3</p>
-                </div>
-                <div class="card">
-                    <h3>Core Concepts</h3>
-                    <p>OOPs, DBMS, Data Structures, OS</p>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -264,11 +150,9 @@
         <div class="container">
             <h2 class="section-title">📬 Get In Touch</h2>
             <p>I am currently open to opportunities. Feel free to connect!</p>
-            <p>📍 Hyderabad, Telangana</p>
-            <br>
             <div class="social-links">
                 <a href="mailto:divyasrigourakagari@gmail.com">📧 Email Me</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">🔗 LinkedIn</a>
+                <a href="https://linkedin.com/in/divya-sri-gourakagari-606463313" target="_blank">🔗 LinkedIn</a>
                 <a href="https://github.com/gdivyasri5" target="_blank">🐙 GitHub</a>
             </div>
             <br><br>
